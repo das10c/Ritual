@@ -85,6 +85,22 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21887867 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
+  m_PrefabInternal: {fileID: 409337578}
+--- !u!64 &21887871
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21887867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
 --- !u!1 &43090972
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,13 +185,9 @@ MonoBehaviour:
   matchMaker: {fileID: 0}
   matchName: default
   matchSize: 4
-<<<<<<< HEAD
   playerPrefabIndex: 0
   flyingStart: {fileID: 1766733230}
   groundStart: {fileID: 560985194}
-=======
-  spawner: {fileID: 560985193}
->>>>>>> origin/master
 --- !u!114 &43090974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +266,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 903718522ebc49742ba01a65b2932b8c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 143c75a42e30deb41a9793ec9863b38d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 903718522ebc49742ba01a65b2932b8c, type: 3}
   m_IsPrefabParent: 0
@@ -270,7 +286,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -302,7 +318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
       propertyPath: m_LocalScale.z
@@ -321,7 +337,7 @@ GameObject:
   - 4: {fileID: 560985195}
   - 114: {fileID: 560985194}
   m_Layer: 0
-  m_Name: PlayerSpawn
+  m_Name: GroundStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,18 +361,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560985193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.6, y: 1, z: 34.9}
+  m_LocalPosition: {x: -24.1, y: 0, z: -27.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 7
-=======
-<<<<<<< HEAD
-  m_RootOrder: 4
-=======
-  m_RootOrder: 6
->>>>>>> origin/master
 --- !u!1 &702208017 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 903718522ebc49742ba01a65b2932b8c, type: 3}
@@ -367,13 +376,12 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702208017}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ba92fb44336020f40bdf294bb66bc9da, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 903718522ebc49742ba01a65b2932b8c, type: 3}
->>>>>>> origin/master
 --- !u!1 &771619191
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +529,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-<<<<<<< HEAD
 --- !u!1 &1456036931 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ab4c041697b42a64a923908b84cdd61f, type: 3}
@@ -538,10 +545,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 0}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
 --- !u!1 &1766733229
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,12 +583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 6
-=======
-  m_RootOrder: 5
->>>>>>> origin/master
->>>>>>> origin/master
 --- !u!1 &2038359417
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,12 +4,13 @@ using System.Collections;
 public class TopDownController : MonoBehaviour {
 
     new Rigidbody rigidbody;
-
+    bool first = true;
     public float speed = 10;
 
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody>();
+
 	}
 	
 	// Update is called once per frame
