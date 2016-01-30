@@ -7,16 +7,21 @@ public class MyNetworkManager : NetworkManager
 {
     // in the Network Manager component, you must put your player prefabs 
     // in the Spawn Info -> Registered Spawnable Prefabs section 
-    public short playerPrefabIndex;
-    public NetworkStartPosition flyingStart, groundStart;
-
+    static short playerPrefabIndex = 0;
+    bool first = true;
+    public GameObject spawner;
 
     public override void OnStartServer()
     {
+        if (!first)
+        {
+            first = true;
+            playerPrefabIndex = 0;
+            Vector3 temp = spawner.transform.position;
+            temp.y -= 10;
+            spawner.transform.position = temp;
+        }
         NetworkServer.RegisterHandler(MsgTypes.PlayerPrefab, OnResponsePrefab);
-        flyingStart.gameObject.SetActive(false);
-        groundStart.gameObject.SetActive(false);
-        print("here");
         base.OnStartServer();
     }
 
@@ -36,21 +41,18 @@ public class MyNetworkManager : NetworkManager
 
     private void OnResponsePrefab(NetworkMessage netMsg)
     {
-        if (playerPrefabIndex == 0)
-        {
-            flyingStart.gameObject.SetActive(true);
-            groundStart.gameObject.SetActive(false);
-
-        }
-        else
-        {
-            flyingStart.gameObject.SetActive(false);
-            groundStart.gameObject.SetActive(true);
-        }
         MsgTypes.PlayerPrefabMsg msg = netMsg.ReadMessage<MsgTypes.PlayerPrefabMsg>();
         playerPrefab = spawnPrefabs[msg.prefabIndex];
         base.OnServerAddPlayer(netMsg.conn, msg.controllerID);
         Debug.Log(playerPrefab.name + " spawned!");
+        if (first)
+        {
+            first = false;
+            playerPrefabIndex = 1;
+            Vector3 temp = spawner.transform.position;
+            temp.y += 10;
+            spawner.transform.position = temp;
+        }
     }
 
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
@@ -58,6 +60,7 @@ public class MyNetworkManager : NetworkManager
         MsgTypes.PlayerPrefabMsg msg = new MsgTypes.PlayerPrefabMsg();
         msg.controllerID = playerControllerId;
         NetworkServer.SendToClient(conn.connectionId, MsgTypes.PlayerPrefab, msg);
+
     }
 
     // I have put a toggle UI on gameObjects called PC1 and PC2 to select two different character types.
