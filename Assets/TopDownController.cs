@@ -17,5 +17,13 @@ public class TopDownController : MonoBehaviour {
 	void Update () {
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rigidbody.velocity = input * speed;
-	}
+        if (input != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                Quaternion.LookRotation(input),
+                Time.deltaTime * speed
+            );
+        }
+    }
 }

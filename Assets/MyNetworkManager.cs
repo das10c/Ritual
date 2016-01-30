@@ -9,10 +9,15 @@ public class MyNetworkManager : NetworkManager
     // in the Spawn Info -> Registered Spawnable Prefabs section 
     static short playerPrefabIndex = 0;
     bool first = true;
-    public GameObject spawner;
+    GameObject spawner;
 
     public override void OnStartServer()
     {
+        spawner = GameObject.FindGameObjectWithTag("Respawn");
+        if (spawner == null)
+        {
+            Debug.LogError("No Spawn Placed");
+        }
         if (!first)
         {
             first = true;
@@ -45,6 +50,7 @@ public class MyNetworkManager : NetworkManager
         playerPrefab = spawnPrefabs[msg.prefabIndex];
         base.OnServerAddPlayer(netMsg.conn, msg.controllerID);
         Debug.Log(playerPrefab.name + " spawned!");
+        Debug.LogError(playerPrefabIndex);
         if (first)
         {
             first = false;
