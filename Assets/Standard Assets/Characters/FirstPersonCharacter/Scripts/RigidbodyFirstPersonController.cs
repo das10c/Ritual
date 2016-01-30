@@ -7,7 +7,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (Rigidbody))]
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
-    {
+    {	
+		public float health = 100;
         [Serializable]
         public class MovementSettings
         {
@@ -134,6 +135,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+			if (health <= 0)
+			{
+				//Game over?
+			}
         }
 
 
