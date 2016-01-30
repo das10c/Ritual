@@ -5,12 +5,18 @@ public class GroundEnemyAI : MonoBehaviour {
 
 	GameObject player = null;
 	Transform playerT = null;
-	float MoveSpeed = 4;
-	float MaxDist = 10;
+
+    float MaxDist = 10;
 	float MinDist = 1;
 	public float health = 100;
+    health h;
+    public float attackStrength = 10;
+    public float attackRate = 1;
+    public float moveSpeed = 4;
 
-	void Update()
+    float timer = 0;
+
+    void Update()
 	{
 		chase();
 		if (health <= 0)
@@ -21,7 +27,8 @@ public class GroundEnemyAI : MonoBehaviour {
 
 	void chase()
 	{
-		if(player == null)
+        timer += Time.deltaTime;
+        if (player == null)
 		{
 			player = GameObject.FindGameObjectWithTag("Ground");
 		}
@@ -35,14 +42,20 @@ public class GroundEnemyAI : MonoBehaviour {
 			if (Vector3.Distance(transform.position, playerT.position) >= MinDist)
 			{
 
-				transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+				transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
 			}
-			else
-			{
-				player.GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController>().health -= 10;
-			}
-		}
+            else if (timer > attackRate)
+            {
+                h.updateHealth(-attackStrength);
+                timer = 0;
+            }
+        }
 
 	}
+
+    void Start()
+    {
+        h = FindObjectOfType<health>();
+    }
 }
