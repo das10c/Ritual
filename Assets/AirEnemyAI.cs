@@ -5,11 +5,15 @@ public class AirEnemyAI : MonoBehaviour
 {
     GameObject player = null;
     Transform playerT = null;
-    float MoveSpeed = 4;
-    float MaxDist = 10;
+
     float MinDist = 1;
     public float health = 100;
+    public float attackStrength = 10;
+    public float attackRate = 1;
+    public float moveSpeed = 4;
+    health h;
 
+    float timer = 0;
 
     void Update()
     {
@@ -22,6 +26,7 @@ public class AirEnemyAI : MonoBehaviour
 
     void chase()
     {
+        timer += Time.deltaTime;
         if(player == null)
         {
             player = GameObject.FindGameObjectWithTag("Flying");
@@ -36,14 +41,20 @@ public class AirEnemyAI : MonoBehaviour
             if (Vector3.Distance(transform.position, playerT.position) >= MinDist)
             {
 
-                transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+                transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
             }
-            else
+            else if (timer > attackRate)
             {
-                player.GetComponent<TopDownController>().health -= 10;
+                h.updateHealth(-attackStrength);
+                timer = 0;
             }
         }
 
+    }
+
+    void Start()
+    {
+        h = FindObjectOfType<health>();
     }
 }
