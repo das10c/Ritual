@@ -4,7 +4,6 @@ using System.Collections;
 public class TopDownController : MonoBehaviour {
 
     new Rigidbody rigidbody;
-    bool first = true;
     public float speed = 10;
     public GameObject cone;
     public float health = 100;

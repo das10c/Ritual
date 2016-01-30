@@ -5,7 +5,7 @@ public class AirEnemyAI : MonoBehaviour
 {
     GameObject player = null;
     Transform playerT = null;
-    float MaxDist = 10;
+
     float MinDist = 1;
     public float health = 100;
     public float attackStrength = 10;
