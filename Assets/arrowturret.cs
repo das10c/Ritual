@@ -2,18 +2,14 @@
 using System.Collections;
 
 public class arrowturret : MonoBehaviour {
-    public Rigidbody arrowbolts;
+    public GameObject arrowbolt;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
-        for (int i = 0; i < 100; i++)
-        {
-            var arrow = Instantiate(arrowbolts);
-        }
+        //if(Input.GetButtonDown("Fire1"))
+        //{
+        GameObject arrow = Instantiate(arrowbolt, transform.position, Quaternion.identity) as GameObject;
+        arrow.GetComponent<Rigidbody>().AddForce(Vector3.up * 100f);
+        // }
     }
 }
