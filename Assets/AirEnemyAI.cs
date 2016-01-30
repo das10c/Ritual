@@ -7,14 +7,20 @@ public class AirEnemyAI : MonoBehaviour
     Transform playerT = null;
     float MoveSpeed = 4;
     float MaxDist = 10;
-    float MinDist = 5;
+    float MinDist = 1;
+    public float health = 100;
+
 
     void Update()
     {
-        Chase();
+        chase();
+        if (health <= 0)
+        {
+            GameObject.Destroy(gameObject);
+        }
     }
 
-    void Chase()
+    void chase()
     {
         if(player == null)
         {
@@ -32,6 +38,10 @@ public class AirEnemyAI : MonoBehaviour
 
                 transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
+            }
+            else
+            {
+                player.GetComponent<TopDownController>().health -= 10;
             }
         }
 
