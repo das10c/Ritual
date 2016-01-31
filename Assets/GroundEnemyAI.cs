@@ -64,6 +64,10 @@ public class GroundEnemyAI : MonoBehaviour {
                 timer = 0;
             }
         }
+        else if (nav)
+        {
+            agent.destination = agent.gameObject.transform.position;
+        }
 
 	}
 
