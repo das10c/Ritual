@@ -26,7 +26,7 @@ public class PickupHealthScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other == player)
+        if (other == player && h.currentHealth < h.maxHealth && h.currentHealth > 0)
         {
             h.updateHealth(recoveryAmount);
             Destroy(gameObject);

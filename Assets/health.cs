@@ -16,6 +16,10 @@ public class health : MonoBehaviour {
     public void updateHealth(float amount)
     {
         currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
         healthBar.fillAmount = currentHealth / maxHealth;
         if (currentHealth <= 0)
         {
