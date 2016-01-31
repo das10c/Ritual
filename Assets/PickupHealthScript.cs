@@ -9,13 +9,11 @@ public class PickupHealthScript : MonoBehaviour {
     public float rotationRate = 50;
     public float recoveryAmount = 25;
 
-	// Use this for initialization
 	void Start ()
     {
         h = FindObjectOfType<health>();
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         transform.Rotate(new Vector3 (0, rotationRate, 0) * Time.deltaTime);
@@ -31,6 +29,7 @@ public class PickupHealthScript : MonoBehaviour {
         if (other == player)
         {
             h.updateHealth(recoveryAmount);
+            Destroy(gameObject);
         }
     }
 }
