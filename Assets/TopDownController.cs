@@ -8,7 +8,8 @@ public class TopDownController : MonoBehaviour {
     public GameObject cone;
     bool hasRock = false;
     float rockStrength = 20;
-
+    float timer = 0;
+    float attackLength = 1;
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody>();
@@ -17,6 +18,7 @@ public class TopDownController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        timer += Time.deltaTime;
         Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rigidbody.velocity = input * speed;
         if (input != Vector3.zero)
@@ -27,11 +29,12 @@ public class TopDownController : MonoBehaviour {
                 Time.deltaTime * speed
             );
         }
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             cone.SetActive(true);
+            timer = 0;
         }
-        else
+        else if (cone.activeInHierarchy && timer > attackLength)
         {
             cone.SetActive(false);
         }

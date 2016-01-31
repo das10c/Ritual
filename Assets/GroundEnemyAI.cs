@@ -35,16 +35,29 @@ public class GroundEnemyAI : MonoBehaviour {
 		else if(playerT == null)
 		{
 			playerT = player.transform;
+
 		}
 		else
-		{
-			transform.LookAt(playerT);
+        {
+            if (nav)
+            {
+                agent.destination = playerT.position;
+            }
+            else
+            {
+                transform.LookAt(playerT);
+            }
+
 			if (Vector3.Distance(transform.position, playerT.position) >= MinDist)
 			{
+                if (!nav)
+                {
+                    Vector3 dir = transform.forward;
+                    dir.y = 0;
+                    transform.position += dir * moveSpeed * Time.deltaTime;
+                }
 
-				transform.position += transform.forward * moveSpeed * Time.deltaTime;
-
-			}
+            }
             else if (timer > attackRate)
             {
                 h.updateHealth(-attackStrength);
@@ -54,8 +67,18 @@ public class GroundEnemyAI : MonoBehaviour {
 
 	}
 
+    public Transform goal;
+    bool nav = false;
+    NavMeshAgent agent;
+
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        if (agent != null)
+        {
+            nav = true;
+        }
         h = FindObjectOfType<health>();
+
     }
 }

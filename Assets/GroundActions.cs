@@ -33,7 +33,7 @@ public class GroundActions : MonoBehaviour {
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit))
             {
                 GroundEnemyAI enemy = hit.collider.gameObject.GetComponent<GroundEnemyAI>();
-                if (enemy != null)
+                if (enemy != null && enemy.GetComponentInChildren<AudioSource>() == null)
                 {
                     GameObject m = Instantiate(marker, enemy.transform.position, Quaternion.identity) as GameObject;
                     m.transform.parent = enemy.transform;

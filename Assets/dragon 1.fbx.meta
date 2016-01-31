@@ -1,0 +1,615 @@
+fileFormatVersion: 2
+guid: 06715990f8d02374587e36d88774cba6
+timeCreated: 1454229231
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Circle
+    100004: Circle.001
+    100006: Cube
+    100008: Cube.001
+    100010: Cube.002
+    100012: Cube.003
+    100014: Cube.004
+    100016: Cylinder
+    100018: Cylinder.002
+    100020: //RootNode
+    100022: Foot.L
+    100024: Foot.R
+    100026: Foot_finger1.L
+    100028: Foot_finger1.L.001
+    100030: Foot_finger1.L.002
+    100032: Foot_finger1.R
+    100034: Foot_finger1.R.001
+    100036: Foot_finger1.R.002
+    100038: Foot_finger2.L
+    100040: Foot_finger2.L.001
+    100042: Foot_finger2.L.001_end
+    100044: Foot_finger2.L.002
+    100046: Foot_finger2.L.002_end
+    100048: Foot_finger2.L_end
+    100050: Foot_finger2.R
+    100052: Foot_finger2.R.001
+    100054: Foot_finger2.R.001_end
+    100056: Foot_finger2.R.002
+    100058: Foot_finger2.R.002_end
+    100060: Foot_finger2.R_end
+    100062: Head
+    100064: Hips
+    100066: Hips_Root
+    100068: Icosphere
+    100070: Icosphere.001
+    100072: Icosphere.002
+    100074: Icosphere.003
+    100076: Icosphere.004
+    100078: Leg_Bottom.L
+    100080: Leg_Bottom.R
+    100082: Leg_IK.L
+    100084: Leg_IK.L_end
+    100086: Leg_IK.R
+    100088: Leg_IK.R_end
+    100090: Leg_Middle.L
+    100092: Leg_Middle.R
+    100094: Leg_Pole1.L
+    100096: Leg_Pole1.L_end
+    100098: Leg_Pole1.R
+    100100: Leg_Pole1.R_end
+    100102: Leg_Top.L
+    100104: Leg_Top.R
+    100106: Mouth
+    100108: Mouth_end
+    100110: Neck1
+    100112: Neck2
+    100114: Neck2.001
+    100116: Neck2.001_end
+    100118: Plane
+    100120: Plane.001
+    100122: Plane.002
+    100124: Root
+    100126: Spine
+    100128: Spine1
+    100130: Tail1
+    100132: Tail2
+    100134: Tail3
+    100136: Tail4
+    100138: Tail5
+    100140: Tail6
+    100142: Tail7
+    100144: Tail8
+    100146: Tail8_end
+    100148: tongue1
+    100150: tongue2
+    100152: tongue3
+    100154: tongue4
+    100156: tongue4.001
+    100158: tongue4.001_end
+    100160: Wing1.L
+    100162: Wing1.R
+    100164: Wing2.L
+    100166: Wing2.R
+    100168: Wing_Pole.L
+    100170: Wing_Pole.L_end
+    100172: Wing_Pole.R
+    100174: Wing_Pole.R_end
+    100176: WingBone1_1.L
+    100178: WingBone1_1.R
+    100180: WingBone1_2.L
+    100182: WingBone1_2.R
+    100184: WingBone1_3.L
+    100186: WingBone1_3.L_end
+    100188: WingBone1_3.R
+    100190: WingBone1_3.R_end
+    100192: WingBone2_1.L
+    100194: WingBone2_1.R
+    100196: WingBone2_2.L
+    100198: WingBone2_2.R
+    100200: WingBone2_3.L
+    100202: WingBone2_3.L_end
+    100204: WingBone2_3.R
+    100206: WingBone2_3.R_end
+    100208: WingBone3_1.L
+    100210: WingBone3_1.R
+    100212: WingBone3_2.L
+    100214: WingBone3_2.R
+    100216: WingBone3_3.L
+    100218: WingBone3_3.L_end
+    100220: WingBone3_3.R
+    100222: WingBone3_3.R_end
+    100224: WingIK.L
+    100226: WingIK.L_end
+    100228: WingIK.R
+    100230: WingIK.R_end
+    400000: Armature
+    400002: Circle
+    400004: Circle.001
+    400006: Cube
+    400008: Cube.001
+    400010: Cube.002
+    400012: Cube.003
+    400014: Cube.004
+    400016: Cylinder
+    400018: Cylinder.002
+    400020: //RootNode
+    400022: Foot.L
+    400024: Foot.R
+    400026: Foot_finger1.L
+    400028: Foot_finger1.L.001
+    400030: Foot_finger1.L.002
+    400032: Foot_finger1.R
+    400034: Foot_finger1.R.001
+    400036: Foot_finger1.R.002
+    400038: Foot_finger2.L
+    400040: Foot_finger2.L.001
+    400042: Foot_finger2.L.001_end
+    400044: Foot_finger2.L.002
+    400046: Foot_finger2.L.002_end
+    400048: Foot_finger2.L_end
+    400050: Foot_finger2.R
+    400052: Foot_finger2.R.001
+    400054: Foot_finger2.R.001_end
+    400056: Foot_finger2.R.002
+    400058: Foot_finger2.R.002_end
+    400060: Foot_finger2.R_end
+    400062: Head
+    400064: Hips
+    400066: Hips_Root
+    400068: Icosphere
+    400070: Icosphere.001
+    400072: Icosphere.002
+    400074: Icosphere.003
+    400076: Icosphere.004
+    400078: Leg_Bottom.L
+    400080: Leg_Bottom.R
+    400082: Leg_IK.L
+    400084: Leg_IK.L_end
+    400086: Leg_IK.R
+    400088: Leg_IK.R_end
+    400090: Leg_Middle.L
+    400092: Leg_Middle.R
+    400094: Leg_Pole1.L
+    400096: Leg_Pole1.L_end
+    400098: Leg_Pole1.R
+    400100: Leg_Pole1.R_end
+    400102: Leg_Top.L
+    400104: Leg_Top.R
+    400106: Mouth
+    400108: Mouth_end
+    400110: Neck1
+    400112: Neck2
+    400114: Neck2.001
+    400116: Neck2.001_end
+    400118: Plane
+    400120: Plane.001
+    400122: Plane.002
+    400124: Root
+    400126: Spine
+    400128: Spine1
+    400130: Tail1
+    400132: Tail2
+    400134: Tail3
+    400136: Tail4
+    400138: Tail5
+    400140: Tail6
+    400142: Tail7
+    400144: Tail8
+    400146: Tail8_end
+    400148: tongue1
+    400150: tongue2
+    400152: tongue3
+    400154: tongue4
+    400156: tongue4.001
+    400158: tongue4.001_end
+    400160: Wing1.L
+    400162: Wing1.R
+    400164: Wing2.L
+    400166: Wing2.R
+    400168: Wing_Pole.L
+    400170: Wing_Pole.L_end
+    400172: Wing_Pole.R
+    400174: Wing_Pole.R_end
+    400176: WingBone1_1.L
+    400178: WingBone1_1.R
+    400180: WingBone1_2.L
+    400182: WingBone1_2.R
+    400184: WingBone1_3.L
+    400186: WingBone1_3.L_end
+    400188: WingBone1_3.R
+    400190: WingBone1_3.R_end
+    400192: WingBone2_1.L
+    400194: WingBone2_1.R
+    400196: WingBone2_2.L
+    400198: WingBone2_2.R
+    400200: WingBone2_3.L
+    400202: WingBone2_3.L_end
+    400204: WingBone2_3.R
+    400206: WingBone2_3.R_end
+    400208: WingBone3_1.L
+    400210: WingBone3_1.R
+    400212: WingBone3_2.L
+    400214: WingBone3_2.R
+    400216: WingBone3_3.L
+    400218: WingBone3_3.L_end
+    400220: WingBone3_3.R
+    400222: WingBone3_3.R_end
+    400224: WingIK.L
+    400226: WingIK.L_end
+    400228: WingIK.R
+    400230: WingIK.R_end
+    2300000: Circle
+    2300002: Circle.001
+    2300004: Cube
+    2300006: Cube.001
+    2300008: Cube.002
+    2300010: Cube.003
+    2300012: Cube.004
+    2300014: Cylinder.002
+    2300016: Icosphere
+    2300018: Icosphere.001
+    2300020: Icosphere.002
+    2300022: Icosphere.003
+    2300024: Icosphere.004
+    2300026: Plane
+    2300028: Plane.001
+    2300030: Plane.002
+    3300000: Circle
+    3300002: Circle.001
+    3300004: Cube
+    3300006: Cube.001
+    3300008: Cube.002
+    3300010: Cube.003
+    3300012: Cube.004
+    3300014: Cylinder.002
+    3300016: Icosphere
+    3300018: Icosphere.001
+    3300020: Icosphere.002
+    3300022: Icosphere.003
+    3300024: Icosphere.004
+    3300026: Plane
+    3300028: Plane.001
+    3300030: Plane.002
+    4300000: Cube.004
+    4300002: Cube.003
+    4300004: Plane.002
+    4300006: Plane.001
+    4300008: Plane
+    4300010: Circle.001
+    4300012: Cylinder.002
+    4300014: Icosphere.004
+    4300016: Cube.002
+    4300018: Icosphere.003
+    4300020: Icosphere.002
+    4300022: Icosphere.001
+    4300024: Icosphere
+    4300026: Circle
+    4300028: Cube.001
+    4300030: Cube
+    4300032: Cylinder
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: Cylinder
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Hips_Root
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/Mouth
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/Mouth/Mouth_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/tongue1
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/tongue1/tongue2
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/tongue1/tongue2/tongue3/tongue4/tongue4.001
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Spine/Spine1/Neck1/Neck2/Head/tongue1/tongue2/tongue3/tongue4/tongue4.001/tongue4.001_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone1_1.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone1_1.L/WingBone1_2.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone1_1.L/WingBone1_2.L/WingBone1_3.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone1_1.L/WingBone1_2.L/WingBone1_3.L/WingBone1_3.L_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone2_1.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone2_1.L/WingBone2_2.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone2_1.L/WingBone2_2.L/WingBone2_3.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone2_1.L/WingBone2_2.L/WingBone2_3.L/WingBone2_3.L_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone3_1.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone3_1.L/WingBone3_2.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone3_1.L/WingBone3_2.L/WingBone3_3.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.L/Wing2.L/WingBone3_1.L/WingBone3_2.L/WingBone3_3.L/WingBone3_3.L_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone1_1.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone1_1.R/WingBone1_2.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone1_1.R/WingBone1_2.R/WingBone1_3.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone1_1.R/WingBone1_2.R/WingBone1_3.R/WingBone1_3.R_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone2_1.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone2_1.R/WingBone2_2.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone2_1.R/WingBone2_2.R/WingBone2_3.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone2_1.R/WingBone2_2.R/WingBone2_3.R/WingBone2_3.R_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone3_1.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone3_1.R/WingBone3_2.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone3_1.R/WingBone3_2.R/WingBone3_3.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Hips/Wing1.R/Wing2.R/WingBone3_1.R/WingBone3_2.R/WingBone3_3.R/WingBone3_3.R_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L/Foot_finger2.L
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L/Foot_finger2.L/Foot_finger2.L_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L.001
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L.001/Foot_finger2.L.001
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L.001/Foot_finger2.L.001/Foot_finger2.L.001_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L.002
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L.002/Foot_finger2.L.002
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.L/Leg_Middle.L/Leg_Bottom.L/Foot.L/Foot_finger1.L.002/Foot_finger2.L.002/Foot_finger2.L.002_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R/Foot_finger2.R
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R/Foot_finger2.R/Foot_finger2.R_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R.001
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R.001/Foot_finger2.R.001
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R.001/Foot_finger2.R.001/Foot_finger2.R.001_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R.002
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R.002/Foot_finger2.R.002
+        weight: 1
+      - path: Armature/Root/Hips_Root/Leg_Top.R/Leg_Middle.R/Leg_Bottom.R/Foot.R/Foot_finger1.R.002/Foot_finger2.R.002/Foot_finger2.R.002_end
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3/Tail4
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3/Tail4/Tail5
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8
+        weight: 1
+      - path: Armature/Root/Hips_Root/Tail1/Tail2/Tail3/Tail4/Tail5/Tail6/Tail7/Tail8/Tail8_end
+        weight: 1
+      - path: Armature/Root/Leg_IK.L
+        weight: 1
+      - path: Armature/Root/Leg_IK.L/Leg_IK.L_end
+        weight: 1
+      - path: Armature/Root/Leg_IK.R
+        weight: 1
+      - path: Armature/Root/Leg_IK.R/Leg_IK.R_end
+        weight: 1
+      - path: Armature/Root/Leg_Pole1.L
+        weight: 1
+      - path: Armature/Root/Leg_Pole1.L/Leg_Pole1.L_end
+        weight: 1
+      - path: Armature/Root/Leg_Pole1.R
+        weight: 1
+      - path: Armature/Root/Leg_Pole1.R/Leg_Pole1.R_end
+        weight: 1
+      - path: Armature/Root/Neck2.001
+        weight: 1
+      - path: Armature/Root/Neck2.001/Neck2.001_end
+        weight: 1
+      - path: Armature/Root/Wing_Pole.L
+        weight: 1
+      - path: Armature/Root/Wing_Pole.L/Wing_Pole.L_end
+        weight: 1
+      - path: Armature/Root/Wing_Pole.R
+        weight: 1
+      - path: Armature/Root/Wing_Pole.R/Wing_Pole.R_end
+        weight: 1
+      - path: Armature/Root/WingIK.L
+        weight: 1
+      - path: Armature/Root/WingIK.L/WingIK.L_end
+        weight: 1
+      - path: Armature/Root/WingIK.R
+        weight: 1
+      - path: Armature/Root/WingIK.R/WingIK.R_end
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: Circle.001
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Cylinder.002
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere.001
+        weight: 1
+      - path: Icosphere.002
+        weight: 1
+      - path: Icosphere.003
+        weight: 1
+      - path: Icosphere.004
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane.001
+        weight: 1
+      - path: Plane.002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
