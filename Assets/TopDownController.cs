@@ -7,6 +7,7 @@ public class TopDownController : MonoBehaviour {
     public float speed = 10;
     public GameObject cone;
     public float health = 100;
+    bool hasRock = false;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,26 @@ public class TopDownController : MonoBehaviour {
         else
         {
             cone.SetActive(false);
+        }
+        RaycastHit hit;
+        if (Input.GetButton("Fire2")  && !hasRock)
+        {
+            if (Physics.Raycast(transform.position,Vector3.down,out hit)  && hit.collider.tag == "Rock")
+            {
+                hasRock = true;
+                //TODO: Dive Animation
+                //TODO: Dust Particles
+                GameObject.Destroy((hit.collider.gameObject));
+            }
+        }
+        else if(Input.GetButton("Fire2") && hasRock)
+        {
+            if (Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                hasRock = false;
+                //TODO: Shatter Particles
+                GameObject.Destroy((hit.collider.gameObject));
+            }
         }
     }
 }
