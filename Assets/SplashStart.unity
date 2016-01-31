@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  setTime: 6
-  dimTime: 5
+  setTime: 3
+  dimTime: 2
   dimLight: {fileID: 927015938}
   zoomSpeed: 0.2
 --- !u!81 &1153472108
@@ -319,8 +319,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1591217660}
   m_LocalRotation: {x: -0.00000005960466, y: 0.7071068, z: -0.7071068, w: -0.00000014901164}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.12, y: 0.16, z: 0}
+  m_LocalScale: {x: 1.9767714, y: 1, z: 1.0278045}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
