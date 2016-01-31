@@ -63,7 +63,7 @@ GameObject:
   - 136: {fileID: 13631300}
   - 114: {fileID: 11487968}
   m_Layer: 0
-  m_Name: RigidBodyFPSController
+  m_Name: RigidBodyFPSControllerNonNet
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   cam: {fileID: 2039690}
   movementSettings:
     ForwardSpeed: 8
