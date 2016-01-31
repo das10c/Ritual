@@ -10,10 +10,12 @@ public class TopDownController : MonoBehaviour {
     float rockStrength = 20;
     float timer = 0;
     float attackLength = 1;
+    Animator anim;
+
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody>();
-
+        anim = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -39,17 +41,17 @@ public class TopDownController : MonoBehaviour {
             cone.SetActive(false);
         }
         RaycastHit hit;
+
+
         if (Input.GetButtonDown("Fire2"))
         {
             Debug.DrawRay(transform.position, Vector3.down, Color.white,  10.0f, false);
             if (Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                print(hit.collider.gameObject);
                 if (!hasRock && hit.collider.tag == "Rock")
                 {
 
                     hasRock = true;
-                    //TODO: Dive Animation
                     //TODO: Dust Particles
                     GameObject.Destroy((hit.collider.gameObject));
                 }
