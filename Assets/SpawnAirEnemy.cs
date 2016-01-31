@@ -14,7 +14,6 @@ public class SpawnAirEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print(passedTime);
         passedTime += Time.deltaTime;
 	    if (timer < passedTime)
         {

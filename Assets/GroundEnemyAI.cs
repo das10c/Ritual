@@ -6,7 +6,7 @@ public class GroundEnemyAI : MonoBehaviour {
 	GameObject player = null;
 	Transform playerT = null;
 
-    float MaxDist = 10;
+    public float MaxDist = 10;
 	float MinDist = 1;
 	public float health = 100;
     health h;
@@ -39,6 +39,7 @@ public class GroundEnemyAI : MonoBehaviour {
 		}
 		else if (Vector3.Distance(transform.position, playerT.position) <= MaxDist)
         {
+            print(name);
             if (nav)
             {
                 agent.destination = playerT.position;
