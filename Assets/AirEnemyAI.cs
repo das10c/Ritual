@@ -13,6 +13,7 @@ public class AirEnemyAI : MonoBehaviour
     public float attackRate = 1;
     public float moveSpeed = 4;
     health h;
+    MusicController mc;
 
     float timer = 0;
 
@@ -38,6 +39,7 @@ public class AirEnemyAI : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position, playerT.position) <= MaxDist)
         {
+            mc.isInCombat = true;
             transform.LookAt(playerT);
             if (Vector3.Distance(transform.position, playerT.position) >= MinDist)
             {
@@ -51,11 +53,11 @@ public class AirEnemyAI : MonoBehaviour
                 timer = 0;
             }
         }
-
     }
 
     void Start()
     {
         h = FindObjectOfType<health>();
+        mc = FindObjectOfType<MusicController>();
     }
 }

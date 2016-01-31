@@ -8,14 +8,22 @@ public class MusicController : MonoBehaviour {
     public AudioMixerSnapshot inCombat;
     public float transitionInMsec = 500;
     public float transitionOutMsec = 2000;
-	
-    public void combatTransitionIn()
-    {
-        inCombat.TransitionTo(transitionInMsec);
-    }
 
-    public void combatTransitionOut()
+    public bool isInCombat = false;
+    private bool wasInCombat = false;
+	
+    void UpdateLate()
     {
-        inCombat.TransitionTo(transitionOutMsec);
+        if (isInCombat && !wasInCombat)
+        {
+            inCombat.TransitionTo(transitionInMsec);
+        }
+        else if (!isInCombat && wasInCombat)
+        {
+            outOfCombat.TransitionTo(transitionOutMsec);
+        }
+
+        wasInCombat = isInCombat;
+        isInCombat = false;
     }
 }

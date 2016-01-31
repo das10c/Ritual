@@ -13,6 +13,7 @@ public class GroundEnemyAI : MonoBehaviour {
     public float attackStrength = 10;
     public float attackRate = 1;
     public float moveSpeed = 4;
+    MusicController mc;
 
     float timer = 0;
 
@@ -40,6 +41,7 @@ public class GroundEnemyAI : MonoBehaviour {
 		else if (Vector3.Distance(transform.position, playerT.position) <= MaxDist)
         {
             print(name);
+            mc.isInCombat = true;
             if (nav)
             {
                 agent.destination = playerT.position;
@@ -84,6 +86,6 @@ public class GroundEnemyAI : MonoBehaviour {
             nav = true;
         }
         h = FindObjectOfType<health>();
-
+        mc = FindObjectOfType<MusicController>();
     }
 }
