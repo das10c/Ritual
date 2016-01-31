@@ -6,7 +6,6 @@ public class TopDownController : MonoBehaviour {
     new Rigidbody rigidbody;
     public float speed = 10;
     public GameObject cone;
-    public float health = 100;
     bool hasRock = false;
     float rockStrength = 20;
 

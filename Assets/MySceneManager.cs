@@ -8,4 +8,10 @@ public class MySceneManager : MonoBehaviour {
     {
         SceneManager.LoadScene("EndScene");
     }
+
+    public static void LoadLevel()
+    {
+        SceneManager.LoadScene("Build Level 1");
+        SceneManager.LoadScene("UIScene", LoadSceneMode.Additive);
+    }
 }
