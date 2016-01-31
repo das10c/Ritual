@@ -8,6 +8,7 @@ public class TopDownController : MonoBehaviour {
     public GameObject cone;
     public float health = 100;
     bool hasRock = false;
+    float rockStrength = 20;
 
 	// Use this for initialization
 	void Start () {
@@ -36,23 +37,33 @@ public class TopDownController : MonoBehaviour {
             cone.SetActive(false);
         }
         RaycastHit hit;
-        if (Input.GetButton("Fire2")  && !hasRock)
+        if (Input.GetButtonDown("Fire2"))
         {
-            if (Physics.Raycast(transform.position,Vector3.down,out hit)  && hit.collider.tag == "Rock")
-            {
-                hasRock = true;
-                //TODO: Dive Animation
-                //TODO: Dust Particles
-                GameObject.Destroy((hit.collider.gameObject));
-            }
-        }
-        else if(Input.GetButton("Fire2") && hasRock)
-        {
+            Debug.DrawRay(transform.position, Vector3.down, Color.white,  10.0f, false);
             if (Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                hasRock = false;
-                //TODO: Shatter Particles
-                GameObject.Destroy((hit.collider.gameObject));
+                print(hit.collider.gameObject);
+                if (!hasRock && hit.collider.tag == "Rock")
+                {
+
+                    hasRock = true;
+                    //TODO: Dive Animation
+                    //TODO: Dust Particles
+                    GameObject.Destroy((hit.collider.gameObject));
+                }
+
+                else if (hasRock)
+                {
+                    hasRock = false;
+                    //TODO: Shatter Particles
+                    GroundEnemyAI enemy = hit.collider.gameObject.GetComponent<GroundEnemyAI>();
+                    if (enemy != null)
+                    { 
+                        enemy.health -= rockStrength;
+                        print(enemy.health);
+                    }
+
+                }
             }
         }
     }
