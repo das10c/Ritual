@@ -11,3 +11,9 @@ EditorBuildSettings:
     path: Assets/MainMenu.unity
   - enabled: 0
     path: Assets/AddedFontScenario.unity
+  - enabled: 1
+    path: Assets/UIScene.unity
+  - enabled: 1
+    path: Assets/Standard Assets/Build Level 1.unity
+  - enabled: 1
+    path: Assets/EndScene.unity
