@@ -37,7 +37,7 @@ public class GroundEnemyAI : MonoBehaviour {
 			playerT = player.transform;
 
 		}
-		else
+		else if (Vector3.Distance(transform.position, playerT.position) <= MaxDist)
         {
             if (nav)
             {

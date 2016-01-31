@@ -6,6 +6,7 @@ public class AirEnemyAI : MonoBehaviour
     GameObject player = null;
     Transform playerT = null;
 
+    float MaxDist = 10;
     float MinDist = 1;
     public float health = 100;
     public float attackStrength = 10;
@@ -35,7 +36,7 @@ public class AirEnemyAI : MonoBehaviour
         {
             playerT = player.transform;
         }
-        else
+        else if (Vector3.Distance(transform.position, playerT.position) <= MaxDist)
         {
             transform.LookAt(playerT);
             if (Vector3.Distance(transform.position, playerT.position) >= MinDist)
